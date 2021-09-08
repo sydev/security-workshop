@@ -2,7 +2,7 @@
 
 require_once 'db.php';
 
-class Injection extends Database
+class Vulnerable extends Database
 {
   public function login($email, $password)
   {

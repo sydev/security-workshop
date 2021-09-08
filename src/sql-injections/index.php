@@ -1,6 +1,6 @@
 <?php
   require_once 'db.php';
-  require_once 'injection.php';
+  require_once 'vulnerable.php';
   require_once 'solution.php';
 
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -11,13 +11,13 @@
         break;
 
       case 'sql-injection':
-        $io = new Injection();
-        $users = $io->login($_POST['email'], $_POST['password']);
+        $v = new Vulnerable();
+        $users = $v->login($_POST['email'], $_POST['password']);
         break;
 
       case 'solution':
-        $so = new Solution();
-        $users = $so->login($_POST['email'], $_POST['password']);
+        $s = new Solution();
+        $users = $s->login($_POST['email'], $_POST['password']);
         break;
     }
   }
