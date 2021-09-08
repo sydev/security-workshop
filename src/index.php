@@ -9,6 +9,7 @@
 <body>
   <ul>
     <li><a href="/sql-injections">SQL Injections</a></li>
+    <li><a href="/xss">XSS</a></li>
   </ul>
 </body>
 </html>
